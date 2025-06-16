@@ -1,23 +1,7 @@
 import { createApp } from 'vue';
 import '@/style.css';
 import App from '@/App.vue';
-
-import { createWebHistory, createRouter } from 'vue-router';
-
-import HomeView from '@/views/HomeView.vue';
-import GoalsView from '@/views/GoalsView.vue';
-import MilestonesView from '@/views/MilestonesView.vue';
-
-const routes = [
-    { path: '/', component: HomeView },
-    { path: '/goals', component: GoalsView },
-    { path: '/milestones', component: MilestonesView },
-];
-
-const router = createRouter({
-    history: createWebHistory(),
-    routes,
-});
+import router from '@/router';
 
 const app = createApp(App);
 app.use(router);
